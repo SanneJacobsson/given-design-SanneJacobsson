@@ -1,3 +1,4 @@
+[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-718a45dd9cf7e7f842a935f5ebbe5719a5e09af4491e668f4dbf3b35d5cca122.svg)](https://classroom.github.com/online_ide?assignment_repo_id=11979339&assignment_repo_type=AssignmentRepo)
 # Given design
 
 Denna uppgift går ut på att ni skall skapa en hemsida som ser ut som den givna mallen. Ni skall försöka komma så nära som möjligt i både placering, utseende och funktionalitet. Ni får bara använda html och css i denna uppgift, inga ramverk eller bibliotek.
