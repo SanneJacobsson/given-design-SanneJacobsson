@@ -1,0 +1,24 @@
+@use "mixins";
+
+.hero {
+    width: 100%;
+    height: 100vh;
+    background-image: url("/assets/negative-space-black-forest-dawn.jpg");
+    background-size: cover;
+    background-position: center;
+
+    @include mixins.flex (column, center);
+}
+
+section {
+    margin: 60px;
+    color: white;
+    gap: 15px;
+
+    @include mixins.flex (column, center);
+}
+
+p {
+    text-align: center;
+    font-size: 1.5rem;
+}

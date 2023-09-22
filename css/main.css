@@ -1,0 +1,34 @@
+.hero {
+  width: 100%;
+  height: 100vh;
+  background-image: url("/assets/negative-space-black-forest-dawn.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+section {
+  margin: 60px;
+  color: white;
+  gap: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+p {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+body {
+  margin: 0;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 14pt;
+}
+
+/*# sourceMappingURL=main.css.map */
