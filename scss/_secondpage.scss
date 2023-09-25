@@ -2,7 +2,7 @@
 
 .team {
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
     margin: 0;
 }
 
@@ -10,9 +10,11 @@
     gap: 30px;
 }
 
-article {
+.team__mates article {
     @include mixins.flex (column, center);
     gap: 20px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 article div {
@@ -30,44 +32,38 @@ article h4 {
 article .box {
     width: 280px;
     height: 100px;
-    background-color: rgb(172, 172, 172);
+    background-color: rgb(208, 208, 208);
     padding: 20px;
+    @include mixins.flex (column, center);
+}
+
+.box p {
+    text-align: left;
+    font-size: 1.1rem;
+}
+
+.box p i {
+    font-size: 3.5rem;
 }
 
 .rakib {
-    background-image: url("/assets/profiles/Rakib_Square.png");
-    background-size: cover;
-    background-position: center;
-    border-radius: 50%;
-    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.4);
+    @include mixins.profileimage (url("/assets/profiles/Rakib_Square.png"))
 }
 
 .alexandra {
-    background-image: url("/assets/profiles/Alexandra_Square.png");
-    background-size: cover;
-    background-position: center;
-    border-radius: 50%;
-    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.4);
+    @include mixins.profileimage (url("/assets/profiles/Alexandra_Square.png"))
 }
 
 .lasse {
-    background-image: url("/assets/profiles/NoPerson_Square.png");
-    background-size: cover;
-    background-position: center;
-    border-radius: 50%;
-    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.4);
+    @include mixins.profileimage (url("/assets/profiles/NoPerson_Square.png"))
 }
 
 .sebastian {
-    background-image: url("/assets/profiles/Sebastian_Square.png");
-    background-size: cover;
-    background-position: center;
-    border-radius: 50%;
-    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.4);
+    @include mixins.profileimage (url("/assets/profiles/Sebastian_Square.png"))
 }
 
 .icon {
     width: 100%;
-    height: 100px;
-    color: black;
+    height: 60px;
+    @include mixins.flex (column, center);
 }

@@ -3,17 +3,15 @@
 .hero {
     width: 100%;
     height: 100vh;
-    background-image: url("/assets/negative-space-black-forest-dawn.jpg");
-    background-size: cover;
-    background-position: center;
 
-    @include mixins.flex (column, flex-start);
+    @include mixins.flex (column, space-between);
+    @include mixins.heroimage (url("/assets/negative-space-black-forest-dawn.jpg"))
 }
 
 .hero section {
     margin: 60px;
-    color: white;
     gap: 15px;
+    color: white;
 
     @include mixins.flex (column, center);
 }
@@ -21,4 +19,11 @@
 p {
     text-align: center;
     font-size: 1.5rem;
+}
+
+.arrow {
+    width: 100%;
+    height: 100px;
+
+    @include mixins.flex (column, center);
 }
