@@ -1,0 +1,22 @@
+footer {
+    width: 100%;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+footer section {
+    width: 270px;
+    margin: 15px;
+}
+
+footer section p {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-align: start;
+}

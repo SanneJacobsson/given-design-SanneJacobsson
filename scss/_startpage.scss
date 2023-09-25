@@ -7,10 +7,10 @@
     background-size: cover;
     background-position: center;
 
-    @include mixins.flex (column, center);
+    @include mixins.flex (column, flex-start);
 }
 
-section {
+.hero section {
     margin: 60px;
     color: white;
     gap: 15px;

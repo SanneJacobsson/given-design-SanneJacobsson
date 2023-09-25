@@ -6,11 +6,11 @@
   background-position: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 }
 
-section {
+.hero section {
   margin: 60px;
   color: white;
   gap: 15px;
@@ -29,6 +29,125 @@ body {
   margin: 0;
   font-family: "Times New Roman", Times, serif;
   font-size: 14pt;
+}
+
+.team {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+.team__mates {
+  gap: 30px;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+article div {
+  width: 240px;
+  height: 240px;
+}
+
+article h4 {
+  width: 100%;
+  color: black;
+  text-align: center;
+  margin: 0;
+}
+
+article .box {
+  width: 280px;
+  height: 100px;
+  background-color: rgb(172, 172, 172);
+  padding: 20px;
+}
+
+.rakib {
+  background-image: url("/assets/profiles/Rakib_Square.png");
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.4);
+}
+
+.alexandra {
+  background-image: url("/assets/profiles/Alexandra_Square.png");
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.4);
+}
+
+.lasse {
+  background-image: url("/assets/profiles/NoPerson_Square.png");
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.4);
+}
+
+.sebastian {
+  background-image: url("/assets/profiles/Sebastian_Square.png");
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.4);
+}
+
+.icon {
+  width: 100%;
+  height: 100px;
+  color: black;
+}
+
+nav {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.161);
+  margin-bottom: 50px;
+}
+
+.button {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.161);
+}
+
+footer {
+  width: 100%;
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+footer section {
+  width: 270px;
+  margin: 15px;
+}
+
+footer section p {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  text-align: start;
 }
 
 /*# sourceMappingURL=main.css.map */
