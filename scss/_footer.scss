@@ -1,17 +1,21 @@
+@use "mixins";
+
 footer {
     width: 100%;
     background-color: black;
     color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
     padding-top: 30px;
     padding-bottom: 30px;
+
+    @include mixins.flex (column, flex-start);
+
+    @include mixins.desktop {
+        @include mixins.flex (row, space-evenly);
+    }
 }
 
 footer section {
-    width: 270px;
+    width: 250px;
     margin: 15px;
 }
 

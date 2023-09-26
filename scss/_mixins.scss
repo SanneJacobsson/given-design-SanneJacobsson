@@ -18,3 +18,9 @@
     border-radius: 50%;
     box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.4);
 }
+
+@mixin desktop {
+    @media screen and (min-width: 768px) {
+        @content;
+    }
+}
