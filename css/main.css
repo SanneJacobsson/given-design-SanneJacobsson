@@ -7,13 +7,23 @@
   background-position: center;
 }
 
-.hero section {
+.hero__text {
+  width: 70vw;
   color: white;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .hero__text {
+    font-size: 1.5rem;
+  }
 }
 
 .hero__arrow {
@@ -63,7 +73,7 @@ body {
   }
 }
 
-.team__mates--info {
+.team__mates__info {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -71,32 +81,33 @@ body {
   gap: 20px;
 }
 @media screen and (min-width: 768px) {
-  .team__mates--info {
+  .team__mates__info {
     width: 40%;
   }
 }
 
-article div {
-  width: 240px;
-  height: 240px;
-}
-
-article h4 {
+.team__mates__info h4 {
   width: 100%;
   color: black;
   text-align: center;
   margin: 0;
 }
 
-article .box {
+.team__mates__info .box {
   width: 280px;
   height: 100px;
   background-color: rgb(208, 208, 208);
   padding: 20px;
+  border-radius: 3px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .team__mates__info .box {
+    width: 320px;
+  }
 }
 
 .box p {
@@ -106,6 +117,23 @@ article .box {
 
 .box p i {
   font-size: 3.5rem;
+}
+
+.rakib,
+.alexandra,
+.lasse,
+.sebastian {
+  width: 240px;
+  height: 240px;
+}
+@media screen and (min-width: 768px) {
+  .rakib,
+  .alexandra,
+  .lasse,
+  .sebastian {
+    width: 350px;
+    height: 350px;
+  }
 }
 
 .rakib {
@@ -151,7 +179,6 @@ article .box {
 
 .menu__wrapper {
   width: 100%;
-  height: fit-content;
   background-color: rgba(255, 255, 255, 0.13);
 }
 @media screen and (min-width: 768px) {
@@ -166,7 +193,7 @@ article .box {
 .nav {
   width: 100%;
   max-height: 0;
-  transition: max-height 0.5s ease-out;
+  transition: max-height, 1s, linear;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -179,7 +206,7 @@ article .box {
     flex-direction: row;
     justify-content: right;
     align-items: center;
-    max-height: none;
+    max-height: 100%;
     top: 0;
     width: 100%;
     margin-right: 30px;
@@ -211,9 +238,6 @@ article .box {
   color: white;
 }
 
-.nav__menu a:hover {
-  background-color: rgba(255, 255, 255, 0.13);
-}
 @media screen and (min-width: 768px) {
   .nav__menu a:hover {
     border-bottom: 1px solid white;
@@ -262,10 +286,6 @@ article .box {
 
 .menu__button {
   display: none;
-}
-
-.menu__button:checked .menu__wrapper {
-  background-color: rgba(255, 255, 255, 0.13);
 }
 
 .menu__button:checked ~ nav {

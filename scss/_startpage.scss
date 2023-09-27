@@ -8,13 +8,20 @@
     @include mixins.heroimage (url("/assets/negative-space-black-forest-dawn.jpg"))
 }
 
-.hero section {
+.hero__text {
+    width: 70vw;
     color: white;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+
+    @include mixins.flex (column, center);
+
+    @include mixins.desktop {
+        font-size: 1.5rem;
+    }
 }
 
 .hero__arrow {

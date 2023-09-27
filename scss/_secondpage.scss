@@ -17,7 +17,7 @@
     }
 }
 
-.team__mates--info {
+.team__mates__info {
     @include mixins.flex (column, center);
     gap: 20px;
 
@@ -26,24 +26,25 @@
     }
 }
 
-article div {
-    width: 240px;
-    height: 240px;
-}
-
-article h4 {
+.team__mates__info h4 {
     width: 100%;
     color: black;
     text-align: center;
     margin: 0;
 }
 
-article .box {
+.team__mates__info .box {
     width: 280px;
     height: 100px;
     background-color: rgb(208, 208, 208);
     padding: 20px;
+    border-radius: 3px;
+    
     @include mixins.flex (column, center);
+
+    @include mixins.desktop {
+        width: 320px;
+    }
 }
 
 .box p {
@@ -55,20 +56,33 @@ article .box {
     font-size: 3.5rem;
 }
 
+.rakib,
+.alexandra,
+.lasse,
+.sebastian {
+    width: 240px;
+    height: 240px;
+
+    @include mixins.desktop {
+        width: 350px;
+        height: 350px;
+    }
+}
+
 .rakib {
-    @include mixins.profileimage (url("/assets/profiles/Rakib_Square.png"))
+    @include mixins.profileimage (url("/assets/profiles/Rakib_Square.png"));
 }
 
 .alexandra {
-    @include mixins.profileimage (url("/assets/profiles/Alexandra_Square.png"))
+    @include mixins.profileimage (url("/assets/profiles/Alexandra_Square.png"));
 }
 
 .lasse {
-    @include mixins.profileimage (url("/assets/profiles/NoPerson_Square.png"))
+    @include mixins.profileimage (url("/assets/profiles/NoPerson_Square.png"));
 }
 
 .sebastian {
-    @include mixins.profileimage (url("/assets/profiles/Sebastian_Square.png"))
+    @include mixins.profileimage (url("/assets/profiles/Sebastian_Square.png"));
 }
 
 .team__arrow {

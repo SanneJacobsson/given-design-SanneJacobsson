@@ -2,7 +2,6 @@
 
 .menu__wrapper {
     width: 100%;
-    height: fit-content;
     background-color: rgba(255, 255, 255, 0.13);
 
     @include mixins.desktop {
@@ -13,14 +12,14 @@
 .nav {
     width: 100%;
     max-height: 0;
-    transition: max-height .5s ease-out;
+    transition: max-height, 1s, linear;
     overflow: hidden;
 
     @include mixins.flex (column, center);
 
     @include mixins.desktop {
         @include mixins.flex (row, right);
-        max-height: none;
+        max-height: 100%;
         top: 0;
         width: 100%;
         margin-right: 30px;
@@ -47,8 +46,6 @@
 }
 
 .nav__menu a:hover {
-    background-color: rgba(255, 255, 255, 0.13);
-
     @include mixins.desktop {
         border-bottom: 1px solid white;
     }
@@ -95,11 +92,6 @@
 
 .menu__button {
     display: none;
-}
-
-//kolla detta imorgon varför det ej funkar
-.menu__button:checked .menu__wrapper {
-    background-color: rgba(255, 255, 255, 0.13);
 }
 
 .menu__button:checked ~ nav {
