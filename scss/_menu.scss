@@ -2,12 +2,11 @@
 
 .menu__wrapper {
     width: 100%;
-
-    @include mixins.flex (column, right);
+    height: fit-content;
+    background-color: rgba(255, 255, 255, 0.13);
 
     @include mixins.desktop {
         @include mixins.flex (row, space-between);
-        background-color: rgba(255, 255, 255, 0.13);
     }
 }
 
@@ -31,6 +30,8 @@
 .nav__menu {
     list-style: none;
     padding: 0;
+
+    @include mixins.flex (column, center);
     
     @include mixins.desktop {
         @include mixins.flex (row, right);
@@ -54,7 +55,9 @@
 }
 
 .hamb {
-    padding: 40px 20px;
+    padding: 30px 20px;
+    display: block;
+    float: right;
 
     @include mixins.desktop {
         display: none;

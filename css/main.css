@@ -8,7 +8,6 @@
 }
 
 .hero section {
-  gap: 15px;
   color: white;
   position: absolute;
   top: 50%;
@@ -152,10 +151,8 @@ article .box {
 
 .menu__wrapper {
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: right;
-  align-items: center;
+  height: fit-content;
+  background-color: rgba(255, 255, 255, 0.13);
 }
 @media screen and (min-width: 768px) {
   .menu__wrapper {
@@ -163,7 +160,6 @@ article .box {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba(255, 255, 255, 0.13);
   }
 }
 
@@ -193,6 +189,10 @@ article .box {
 .nav__menu {
   list-style: none;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 @media screen and (min-width: 768px) {
   .nav__menu {
@@ -221,7 +221,9 @@ article .box {
 }
 
 .hamb {
-  padding: 40px 20px;
+  padding: 30px 20px;
+  display: block;
+  float: right;
 }
 @media screen and (min-width: 768px) {
   .hamb {
