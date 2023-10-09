@@ -1,0 +1,113 @@
+@use "mixins";
+
+.menu__wrapper {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.13);
+
+    @include mixins.desktop {
+        @include mixins.flex (row, space-between);
+    }
+}
+
+.nav {
+    width: 100%;
+    max-height: 0;
+    transition: max-height, 1s, linear;
+    overflow: hidden;
+
+    @include mixins.flex (column, center);
+
+    @include mixins.desktop {
+        @include mixins.flex (row, right);
+        max-height: 100%;
+        top: 0;
+        width: 100%;
+        margin-right: 30px;
+    }
+}
+
+.nav__menu {
+    list-style: none;
+    padding: 0;
+
+    @include mixins.flex (column, center);
+    
+    @include mixins.desktop {
+        @include mixins.flex (row, right);
+        right: 30px;
+        gap: 30px;
+    }
+}
+
+.nav__menu a {
+    display: block;
+    text-decoration: none;
+    color: white;
+}
+
+.nav__menu a:hover {
+    @include mixins.desktop {
+        border-bottom: 1px solid white;
+    }
+}
+
+.hamb {
+    padding: 30px 20px;
+    display: block;
+    float: right;
+
+    @include mixins.desktop {
+        display: none;
+    }
+}
+
+.hamb__line {
+    background-color: white;
+    display: block;
+    height: 4px;
+    position: relative;
+    width: 27px;
+    border-radius: 5px;
+}
+
+.hamb__line::before,
+.hamb__line::after {
+    background-color: white;
+    content: "";
+    display: block;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.hamb__line::before {
+    top: 10px;
+}
+
+.hamb__line::after {
+    top: -10px;
+}
+
+.menu__button {
+    display: none;
+}
+
+.menu__button:checked ~ nav {
+    max-height: 100%;
+}
+
+.menu__button:checked ~ .hamb .hamb__line {
+    background: transparent;
+}
+
+.menu__button:checked ~ .hamb .hamb__line::before {
+    transform: rotate(-45deg);
+    top: 0;
+}
+
+.menu__button:checked ~ .hamb .hamb__line::after {
+    transform: rotate(45deg);
+    top: 0;
+}

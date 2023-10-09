@@ -1,0 +1,30 @@
+@use "mixins";
+
+footer {
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    @include mixins.flex (column, flex-start);
+
+    @include mixins.desktop {
+        @include mixins.flex (row, space-evenly);
+    }
+}
+
+footer section {
+    width: 250px;
+    margin: 15px;
+}
+
+footer section p {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-align: start;
+}
+
+footer section p i {
+    margin-right: 10px;
+}
